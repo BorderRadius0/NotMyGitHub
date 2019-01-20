@@ -1,0 +1,92 @@
+/* ==UserStyle==
+@name           NotMyGitHub
+@namespace      github.com/openstyles/stylus
+@version        0.1.3
+@description    0px GitHub
+@author         BorderRadius0
+@homepageURL    https://github.com/BorderRadius0/NotMyGitHub
+@updateURL      https://raw.githubusercontent.com/BorderRadius0/NotMyGitHub/master/NotMyGitHub.user.css
+==/UserStyle== */
+@-moz-document url-prefix("https://github.com") {
+    /* Use more area on large scrrens */
+    @media screen and (min-width: 1366px) {
+        .application-main {
+            width: 1080px;
+            margin: 0 auto;
+        }
+    }
+    @media screen and (min-width: 600px) {
+        .application-main {
+            width: 1080px;
+            margin: 0 auto;
+        }
+    }
+
+    /* WTF is wrong with GitHub designers' mind? Revert retarded fullwidth flex layout */
+    /* Fix some color bullshit */
+    body, .gh-header, .thread-subscription-status, .discussion-timeline-actions, .conversation-list-heading .inner,
+    .user-profile-nav, .profile-timeline-month-heading, .profile-timeline-year-list,
+    .MarketplaceSideNav {
+        background-color: #fafbfc !important;
+    }
+    .timeline-comment-wrapper, .new-discussion-timeline .closed-banner {
+        border-color: #fafbfc !important;
+    }
+    /* Stupid border-bottom on top of user-profile popup */
+    .user-status-container.border-bottom {
+        border-bottom: none !important;
+    }
+    /* "Insights" > "Contributors" svg graph width issue */
+    svg.capped-card-content {
+        width: 100%;
+    }
+
+    /* "My repositories" column */
+    .flex-wrap .team-left-column:nth-child(1) {
+        order: 2;
+        background-color: #f6f8fa !important;
+        border-right: none !important;
+        width: 30%;
+    }
+    /* "Discover repositories" column, or whatever their bullshitting algorithm vomits */
+    .flex-wrap .team-left-column:nth-child(3) {
+        order: 3;
+        display: none !important; /* for now */
+    }
+
+    /* Remove any border radius */
+    *,
+    [class*="rounded-"], .tooltipped::after {
+        border-radius: 0 !important;
+    }
+    /* Exceptions for border radius */
+    .notification-indicator .mail-status {
+        border-radius: 50% !important;
+    }
+    /* Remove various backgroun gradients */
+    [class^="btn"],
+    [class^="btn"]:hover {
+        background-image: none;
+    }
+    .github-jobs-promotion p {
+        background-image: none;
+        background-color: #e0edfa;
+    }
+    /* Fix vertical alignment of SVG icons in buttons */
+    .btn .octicon {
+        vertical-align: sub !important;
+    }
+}
+
+@-moz-document url("https://github.com/explore") {
+    /* Fix some color bullshit */
+    /* I don't know who coded the "Explore" page but it's definitively not the one coding the main site.
+     * The main site is full of semantic classes and it's so developer-friendly you can customize just everything in it.
+     * The "Explore" page on the other hand, is just a bunch of <div> garbage full of styling classes but nothing else.
+     * I've given up hacking this piece of shit, unless they fire thay one person who made this page or force him to add
+     * semantic classes that actually make sense.
+     */
+    body, .application-main {
+        background-color: initial !important;
+    }
+}
