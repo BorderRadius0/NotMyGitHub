@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name           NotMyGitHub
 @namespace      github.com/openstyles/stylus
-@version        0.1.3
-@description    0px GitHub
+@version        0.1.4
+@description    0px GitHub that is actually usable
 @author         BorderRadius0
 @homepageURL    https://github.com/BorderRadius0/NotMyGitHub
 @updateURL      https://raw.githubusercontent.com/BorderRadius0/NotMyGitHub/master/NotMyGitHub.user.css
@@ -83,7 +83,7 @@
     /* I don't know who coded the "Explore" page but it's definitively not the one coding the main site.
      * The main site is full of semantic classes and it's so developer-friendly you can customize just everything in it.
      * The "Explore" page on the other hand, is just a bunch of <div> garbage full of styling classes but nothing else.
-     * I've given up hacking this piece of shit, unless they fire thay one person who made this page or force him to add
+     * I've given up hacking this piece of shit, unless they fire that one person who made this page or force him to add
      * semantic classes that actually make sense.
      */
     body, .application-main {
