@@ -1,26 +1,13 @@
 /* ==UserStyle==
 @name           NotMyGitHub
 @namespace      github.com/openstyles/stylus
-@version        0.1.6
+@version        0.1.7
 @description    0px GitHub that is actually usable
 @author         BorderRadius0
 @homepageURL    https://github.com/BorderRadius0/NotMyGitHub
 @updateURL      https://raw.githubusercontent.com/BorderRadius0/NotMyGitHub/master/NotMyGitHub.user.css
 ==/UserStyle== */
 @-moz-document url-prefix("https://github.com") {
-    /* Use more area on large scrrens */
-    @media screen and (min-width: 1366px) {
-        .application-main {
-            width: 1080px;
-            margin: 0 auto;
-        }
-    }
-    @media screen and (min-width: 600px) {
-        .application-main {
-            width: 1080px;
-            margin: 0 auto;
-        }
-    }
 
     /* WTF is wrong with GitHub designers' mind? Revert retarded fullwidth flex layout */
     /* Fix some color bullshit */
@@ -41,22 +28,12 @@
         width: 100%;
     }
 
-    /* "My repositories" column */
-    .flex-wrap .team-left-column:nth-child(1) {
-        order: 2;
-        background-color: #f6f8fa !important;
-        border-right: none !important;
-        width: 30%;
-        margin-left: 5%;
-    }
-    /* Feed column */
-    .flex-wrap .team-left-column:nth-child(1) + div.p-responsive {
-        width: 65%;
-    }
     /* "Discover repositories" column, or whatever their bullshitting algorithm vomits */
     .flex-wrap .team-left-column:nth-child(3) {
-        order: 3;
-        display: none !important; /* for now */
+        padding-left: 16px;
+        border-left: 1px solid #e1e4e8;
+        padding-top: 30px;
+        margin-top: 0 !important;
     }
 
     /* Remove any border radius */
