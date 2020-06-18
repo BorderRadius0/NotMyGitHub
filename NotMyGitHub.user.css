@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           NotMyGitHub
 @namespace      github.com/openstyles/stylus
-@version        0.1.8
+@version        0.1.9
 @description    0px GitHub that is actually usable
 @author         BorderRadius0
 @homepageURL    https://github.com/BorderRadius0/NotMyGitHub
@@ -14,7 +14,8 @@
     body, .gh-header, .thread-subscription-status, .discussion-timeline-actions, .conversation-list-heading .inner,
     .user-profile-nav, .profile-timeline-month-heading, .profile-timeline-year-list,
     .MarketplaceSideNav,
-    .TimelineItem--condensed .TimelineItem-badge {
+    .TimelineItem--condensed .TimelineItem-badge,
+    .reponav-item.selected {
         background-color: #fafbfc !important;
     }
     .timeline-comment-wrapper, .new-discussion-timeline .closed-banner {
