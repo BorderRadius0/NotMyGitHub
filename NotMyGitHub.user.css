@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           NotMyGitHub
 @namespace      github.com/openstyles/stylus
-@version        0.1.7
+@version        0.1.8
 @description    0px GitHub that is actually usable
 @author         BorderRadius0
 @homepageURL    https://github.com/BorderRadius0/NotMyGitHub
@@ -13,7 +13,8 @@
     /* Fix some color bullshit */
     body, .gh-header, .thread-subscription-status, .discussion-timeline-actions, .conversation-list-heading .inner,
     .user-profile-nav, .profile-timeline-month-heading, .profile-timeline-year-list,
-    .MarketplaceSideNav {
+    .MarketplaceSideNav,
+    .TimelineItem--condensed .TimelineItem-badge {
         background-color: #fafbfc !important;
     }
     .timeline-comment-wrapper, .new-discussion-timeline .closed-banner {
@@ -42,7 +43,7 @@
         border-radius: 0 !important;
     }
     /* Exceptions for border radius */
-    .notification-indicator .mail-status {
+    .notification-indicator .mail-status, .feature-preview-indicator {
         border-radius: 50% !important;
     }
     /* Remove various backgroun gradients */
