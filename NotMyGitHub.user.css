@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           NotMyGitHub
 @namespace      github.com/openstyles/stylus
-@version        0.1.9
+@version        0.1.10
 @description    0px GitHub that is actually usable
 @author         BorderRadius0
 @homepageURL    https://github.com/BorderRadius0/NotMyGitHub
@@ -42,6 +42,11 @@
     *,
     [class*="rounded-"], .tooltipped::after {
         border-radius: 0 !important;
+    }
+    /* Remove radius for contribution dots (currently in feature preview) */
+    .calendar-graph rect.day {
+        rx: 0 !important;
+        ry: 0 !important;
     }
     /* Exceptions for border radius */
     .notification-indicator .mail-status, .feature-preview-indicator {
